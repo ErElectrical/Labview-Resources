@@ -1,0 +1,32 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='30'>
+		<s:AttributeType name='SerialNo' rs:number='1'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='Subject' rs:number='2' rs:maydefer='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' dt:maxLength='1073741823' rs:long='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='Marks' rs:number='3' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true' rs:maybenull='false'/>
+		</s:AttributeType>
+		<s:AttributeType name='PassFail' rs:number='4' rs:nullable='true' rs:writeunknown='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='Salary' rs:number='5' rs:nullable='true' rs:writeunknown='true'>
+			<s:datatype dt:type='number' rs:dbtype='numeric' dt:maxLength='19' rs:scale='0' rs:precision='18' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row SerialNo='1' Subject='Math' Marks='56'  PassFail='True' Salary='65655'/>
+	<z:row SerialNo='2' Subject='Hindi' Marks='86'  PassFail='False' Salary='656'/>
+	<z:row SerialNo='3' Subject='Scienece' Marks='6'  PassFail='True' Salary='6565'/>
+	<z:row SerialNo='7' Subject='Coding ' Marks='0'  PassFail='True' Salary='65655'/>
+	<z:row SerialNo='8' Subject='Labview Programming  ' Marks='33' PassFail='False' Salary='65454'/>
+</rs:data>
+</xml>
